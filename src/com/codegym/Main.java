@@ -27,10 +27,10 @@ public class Main {
         public static void findBook(Book[] arr,String name){
             for (int i = 0; i < arr.length; i++) {
                 if (arr[i].getName().equals(name)){
-                    System.out.println("Cuốn sách bạn cần tìm của "+arr[i].getAuthor()+" có giá là "+arr[i].getPrice()+" và chúng tôi còn " +arr[i].getQuantity()+" quyển");
+                    System.out.println("Cuốn sách "+arr[i].getName() +" của "+ arr[i].getAuthor()+" có giá là "+arr[i].getPrice()+" và chúng tôi còn " +arr[i].getQuantity()+" quyển");
                     break;
-                }else {
-                    System.out.println("Không có cuốn sách bạn muốn tìm .");
+                }if (i==arr.length-1){
+                    System.out.println("Không có cuốn sách bạn muốn tìm");
                 }
             }
         }
